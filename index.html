@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Misconfiguration Scanner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cloud Misconfiguration Scanner</h1>
+        <form id="scanForm">
+            <label for="cloudProvider">Cloud Provider:</label>
+            <select id="cloudProvider" required>
+                <option value="aws">AWS</option>
+                <option value="gcp">GCP</option>
+                <option value="azure">Azure</option>
+            </select>
+
+            <label for="configFile">Upload Config File:</label>
+            <input type="file" id="configFile" accept=".json,.yaml,.yml" required>
+            
+            <button type="submit">Scan</button>
+        </form>
+        
+        <div id="results" class="hidden">
+            <h2>Scan Results</h2>
+            <ul id="resultList"></ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
